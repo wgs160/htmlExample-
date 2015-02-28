@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            border:2px solid #f00;
+        }
+
+        .bb{
+            background-color: green;
+        }
+
+        .bbb{
+            background-color: greenyellow;
+        }
+
+
+    </style>
+</head>
+
+
+<body>
+<div id="a" >
+    <div id="b" >
+        <a id="c"  class="bbb"  class="bb"  >aaaa
+        </a>
+    </div>
+</div>
+    <script >
+
+    var a = document.getElementById("a");
+    var b = document.getElementById("b");
+    var c = document.getElementById("c");
+
+    a.onclick = ok;
+    b.onclick = ok;
+    c.onclick = ok;
+
+
+    function ok(e){
+        console.log(this.id);
+        stopBubble(e);
+    }
+
+    function stopBubble(event) {
+        if (event && event.stopPropagation) {
+            //因此它支持W3C的stopPropation()方法
+            event.stopPropagation();
+        }
+        else {
+            //否则,我们得使用IE的方式来取消事件冒泡
+            window.event.cancelBubble = true;
+        }
+    }
+</script>
+
+
+</body>
+</html>
