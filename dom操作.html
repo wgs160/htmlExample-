@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+
+1、插入：结尾，首，目标后, 兄弟后
+2、删
+3、复制:删除头部复制到结尾
+4、替换
+5、改变节点的属性：style name
+
+插入
+<ul id="myList">
+    <li>项目一</li>
+    <li>项目二</li>
+    <li>项目三</li>
+</ul>
+
+删
+<ul id="myListd" onclick="myFunction()" >
+    <li>项目一</li>
+    <li>项目二</li>
+    <li>项目三</li>
+</ul>
+
+
+<script>
+
+    for(var i=0;i<10;i++){
+        var next='你的id是'+i*2+i ;
+
+    }
+    alert(next);
+    window.onload = function() {
+        /*1、插入*/
+        var ul = document.getElementById("myList");
+        var li = document.createElement("li");
+        var lis = ul.getElementsByTagName("li");
+        li.innerHTML = "我是目标";
+        li.id = "ok";
+        li.setAttribute("name","ok");
+        li.setAttribute("style","height:20px");
+        /*       ul.insertBefore(li, lis[1]);
+        ul.insertBefore(li, ul.firstChild);
+        ul.insertBefore(li, ul.lastChild);
+
+        复制
+        ul.parentNode.insertBefore(ul.cloneNode(true), ul.previousSibling);*/
+
+        cleanWhitespace(ul);
+        //替换
+        ul.replaceChild(li,ul.firstChild);
+
+/*2 删 */
+
+        var ull = document.getElementById("myListd");
+        cleanWhitespace(ull);
+
+        ull.removeChild(ull.firstChild);
+
+
+    //去除空白节点
+        function cleanWhitespace(element)
+        {
+            for(var i=0; i<element.childNodes.length; i++)
+            {
+                var node = element.childNodes[i];
+                if(node.nodeType == 3 && !/\S/.test(node.nodeValue))
+                {
+                    node.parentNode.removeChild(node);
+                }
+            }
+        }
+
+
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+思路
+var max=Math.max.apply(null,array);可获得最大值
+然后对数组操作，删除原数组中的数据，向新数组中按顺序添加最大值，循环
+<script>
+    Array.prototype.indexOf = function(val) {
+        for (var i = 0; i < this.length; i++) {
+            if (this[i] == val) return i;
+        }
+        return -1;
+    };
+
+    Array.prototype.remove = function(val) {
+        var index = this.indexOf(val);
+        if (index > -1) {
+            this.splice(index, 1);
+        }
+    };
+
+    var max=Math.max.apply(null,array);
+
+//todo
+
+
+</script>
+</body>
+</html>

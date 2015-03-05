@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+
+    <style>
+        ul{
+            height: 100px;
+            width: 100px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+
+<div class='slide'>
+    <img src='img/blog_img-01.jpg' />
+    <img src='img/blog_img-02.jpg' />
+    <img src='img/blog_img-03.jpg' />
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script>
+    setInterval(function(){
+        $(".slide").find("img").eq(0).remove().clone().appendTo(".slide");
+    },1000);
+
+
+
+</script>
+</body>
+</html>

@@ -8,7 +8,7 @@
         div{
             width: 60px;
             height: 60px;
-            border: 1px solid ;
+            border: 1px solid #999 ;
         }
         .a{
             width: 100px;
@@ -19,11 +19,37 @@
 </head>
 <body>
 <div class="a" >
-<div >
-</div>
-   23412431243sadfasfdafdsafdasdfasdfasd
-
 
 </div>
+
+Var a=add(2)(3)(4)    a =9
+<script>
+/*
+    var a  =  "aaab";
+    alert(a.match(/(?:a)/));
+*/
+
+/*var add = function (a) {
+    return function (b) {
+        return function (c) {
+            return a + b + c
+        }
+    }
+};*/
+
+    function add(a){
+        var num = a;
+        function addin(b){
+            num = num+b;
+            return addin;//num
+        }
+        addin.toString = function(){
+            return num;
+        }
+        return addin;
+    }
+
+    alert(add(2)(3)(4));
+</script>
 </body>
 </html>
