@@ -3,13 +3,30 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script src="http://cdn.bootcss.com/seajs/2.3.0/sea.js"></script>
 
 </head>
 <body>
-<p>asdfasdf</p>
-<h1>aa</h1>
-<h2>aa</h2>
-<h3>aa</h3>
+<p>aa</p>
+<h1>asdf</h1>
+<h2>asdfa</h2>
+<h3>zxcv</h3>
+
+<script src="http://cdn.bootcss.com/seajs/2.3.0/sea.js"></script>
+<script>
+    seajs.config({
+        base: "./",
+        alias: {
+            "jquery": "http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"
+        },
+        path:{
+            'module': './module/'
+        }
+    })
+
+    // 加载入口模块
+    seajs.use("module/init");
+
+</script>
+
 </body>
 </html>

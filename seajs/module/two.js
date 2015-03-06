@@ -6,13 +6,13 @@
  */
 define(function(require,exports,module){
 
-   var name = "这里是one";
-    var two = require("module/two");
+   var name = "这里是two";
+
     function show(){
-        return two.showtwo();
+       return name;
     }
 
     exports.name = name;
-    exports.showone = show;
+    exports.showtwo= show;
 
 });
