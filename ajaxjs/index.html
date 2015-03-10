@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="ajax.js" ></script>
+</head>
+<body>
+
+<script>
+    ajax({
+       type:"get",
+        data:{
+            a:1,
+            b:2
+        },
+        url:"text.json",
+        success:function(result){
+            alert(result);
+        }
+
+    });
+</script>
+
+
+</body>
+</html>
