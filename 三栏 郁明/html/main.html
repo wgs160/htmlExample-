@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <!--[if IE]>
+    <link href="../css/ie.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+
+    <script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/tab.js"></script>
+                         <script type="text/javascript" >
+                             $(function(){
+                                 $("#bbb").click(function(){
+//                                    window.Location.href="www.baidu.com";
+                                     winOpen = window.open("http://www.baidu.com");
+                                     if(winOpen.CLOSED){
+                                     }else{
+                                         alert(1111);
+
+                                     }
+                                 });
+                             })
+                         </script>
+    <title></title>
+</head>
+        <body>
+
+        <!--头 -->
+        <div class="index_header">
+            <div class="header_div">
+                <div><span style="margin-right: 20px">您好，admin，欢迎登陆</span><a>退出</a></div>
+            </div>
+        </div>
+
+        <!-----------------导航栏----------------->
+        <div class="index_nav">
+            <div class="nav_icon1"></div>
+            <div class="nav_icon2"></div>
+            <div class="nav_icon3"></div>
+            <div class="nav_icon4"></div>
+            <div class="tab_list" ><div class="index_tab_select index_tab" id='hometab' >用户首页</div></div>
+        </div>
+
+        <!---------------主体内容------------->
+        <div class="index_content">
+            <!-------------------左边菜单栏div------------------->
+                <div class="content_left">
+                    <ul class="left_main_ul">
+                        <li class="font_title">菜单</li>
+                        <li>
+                            <!-------------------菜单栏里的div------------------->
+                            <div class="left_menu">
+                                <ul>
+                                    <li sign='a1' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: 0px 0px"></div>
+                                        基础资料
+                                    </li>
+                                    <li sign='a2' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: -192px 0px"></div>
+                                        进口管理
+                                    </li>
+                                    <li sign='a3' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: -352px 0px"></div>
+                                        出口管理
+                                    </li>
+                                    <li sign='a4' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: -416px 0px"></div>
+                                        中期管理
+                                    </li>
+                                    <li sign='a5' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: -576px 0px"></div>
+                                        财务费用
+                                    </li>
+                                    <li sign='a6' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: -736px 0px"></div>
+                                        手册费用
+                                    </li>
+                                    <li sign='a7' >
+                                        <div style="float:left;width: 32px;height: 32px;background-image: url('../image/icon.jpg');background-repeat: no-repeat;background-position: -800px 0px"></div>
+                                        报表中心
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="font_title">常用功能</li>
+                        <li>
+                            <ul class="left_secend_ul">
+                                <li>进口报表</li>
+                                <li>出口报表</li>
+                                <li>进口报表</li>
+                                <li>出口报表</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div id="crdiv" >
+
+                    <div class="tab_to_div" id="homepage" >
+                    <!---------------右边-------------->
+                        <div class="content_right">
+                            <div class="right_help">
+                                <ul>
+                                    <li class="font_title">帮助</li>
+                                    <li>
+                                        <div style="height: 1px;width: 80%;background-color: #cccccc;overflow: hidden;margin-top: 5px"></div>
+                                    </li>
+                                    <li>
+                                        <div style="height: 1px;width: 80%;background-color: #eeeeee;overflow: hidden;"></div>
+                                    </li>
+                                    <li></li>
+                                </ul>
+                            </div>
+
+                        </div>     <!---------------中间div-------------->
+                        <div class="content_center">
+                            <div class="center_div" >
+                                <ul class="center_ul">
+                                    <li>上次有未完成的任务
+                                        <div class="index_button">继续完成</div>
+                                    </li>
+                                    <li style="margin-top: 20px">
+                                        <div class="xuxian"></div>
+                                    </li>
+                                    <li class="font_title" style="margin-top: 20px" >消息</li>
+                                    <ul class="message_ul">
+                                        <li>1.武当山报关单到期<button id="bbb" style="width: 200px;height: 200px" ></button></li>
+                                        <li>2.武当山报关单到期</li>
+                                        <li>3.武当山报关单到期</li>
+                                        <li>4.武当山报关单到期</li>
+                                        <li>5.武当山报关单到期</li>
+                                        <li>6.武当山报关单到期</li>
+                                    </ul>
+                                </ul>
+
+                            </div>
+                        </div>
+                      </div>
+                </div>
+        </div>
+
+</body>
+</html>

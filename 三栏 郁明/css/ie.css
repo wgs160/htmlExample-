@@ -1,0 +1,19 @@
+.index_content{
+    min-height: 700px;
+    overflow: visible;
+}
+
+.content_left{
+     min-height: 700px;
+    overflow: visible;
+}
+
+.content_right{
+    min-height: 700px;
+    overflow: visible;
+}
+
+.content_center{
+    min-height: 700px;
+    overflow: visible;
+}
