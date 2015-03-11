@@ -16,17 +16,37 @@
         }
 
 </style>
+    <script type="text/javascript">
+        var s1 = "aaa";
+        var s2 = new String("aaa");
+        alert(s1 instanceof Object);
+        alert(s2 instanceof Object);
+        alert(s1 instanceof String);
+        alert(s2 instanceof String);
+        alert(typeof(s1));
+        alert(typeof(s2));
+    </script>
 </head>
 <body>
-<div class="a" >
+<input type="button" name="button1" value="按钮1" />
+<input type="button" name="button1" value="按钮2" />
+<input type="button" name="button1" value="按钮3" />
+<input type="button" name="button1" value="按钮4" />
+<input type="button" name="button1" value="按钮5" />
+<!--<div class="a" >
 
-</div>
+</div>-->
 
  <script>
 
+/*     function a () {
+         alert (this);
+     }
+     a.call (null);*/
+/*
  var a = "105615@qq.com";
  var r = /w+@w+.w+/;
-    console.log(r.test(a));
+    console.log(r.test(a));*/
 
     /*
      var a  =  "aaab";
