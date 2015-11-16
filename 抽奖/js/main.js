@@ -22,7 +22,7 @@ var n;
 function start(){
     var s;
     var b;
-    s = Math.floor(Math.random()*7);
+    s = Math.floor(Math.random()*4);
     b = Math.floor(Math.random()*5);
 //    $("tr").eq(m).find("td").eq(n).addClass("red");//每一行对象.removeClass("red");
 //    m=s;

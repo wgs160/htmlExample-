@@ -7,22 +7,22 @@
 </head>
 <body>
 <p>aa</p>
+<input type="text" value="111"/>
 <h1>asdf</h1>
 <h2>asdfa</h2>
 <h3>zxcv</h3>
-
 <script src="http://cdn.bootcss.com/seajs/2.3.0/sea.js"></script>
 <script>
     seajs.config({
         base: "./",
         alias: {
-            "jquery": "http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"
+            "jquery": "http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js",
+            "zepto": "module/zepto.js"
         },
         path:{
-            'module': './module/'
+            'module': './module'
         }
     })
-
     // 加载入口模块
     seajs.use("module/init");
 
