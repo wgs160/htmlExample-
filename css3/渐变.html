@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        .main{
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .mt20{
+            margin-top: 20px;
+        }
+
+        .info{
+            color: red;
+        }
+
+        .t-b{
+            background-image:-webkit-gradient(linear, 50% 0 ,50% 100% , from(#000), to(#fff));
+        }
+        .l-r{
+            background-image:-webkit-gradient(linear,  0 50% , 100% 50% , from(#000), to(#fff));
+        }
+        .lt-rb{
+            background-image:-webkit-gradient(linear,  0 0 , 100% 100% , from(#000), to(#fff));
+        }
+        .t-r-9{
+            background-image:-webkit-gradient(linear,  0 0 , 100% 100% , from(#000), to(#fff),color-stop(0.9,#000));
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1>渐变例子</h1>
+    <p>老式写法</p>
+
+</div>
+    <div class="main">
+        <p>上到下</p>
+        <div style="width: 50px;height: 50px" class="t-b"></div>
+    </div>
+
+    <div class="main">
+        <p>左到右</p>
+        <div style="width: 50px;height: 50px" class="l-r"></div>
+    </div>
+
+    <div class="main">
+        <p>左上到右下</p>
+        <div style="width: 50px;height: 50px" class="lt-rb"></div>
+    </div>
+
+    <div class="main">
+        <p>左到右控制在末尾90%处</p>
+        <div style="height: 50px" class="t-r-9"></div>
+    </div>
+
+    <div class="main">
+        <p>写法解释</p>
+        <p>   background-image:-webkit-gradient(linear, 50% 0 ,50% 100% , from(#000), to(#fff),color-stop(0.9, rgba(0,0,0,1)));</p>
+        <p class="info">  background-image:-webkit-gradient(type, point , point , from(#000), to(#fff),color-stop(0.9, rgba(0,0,0,1)));</p>
+        <p class="mt20"><span class="info">type</span>:为linear线性渐变和radial径向渐变</p>
+        <p class="mt20"><span class="info">point</span>:坐标点，可以为数值百分比，也可以为指定值,为2个参数，X和Y的坐标</p>
+        <p>x的值可以为：left center right，y的值可以为：top center bottom</p>
+        <p>例：0 0 等价于 left top;  100% 100% 等价于 right bottom</p>
+        <p class="mt20"><span class="info">from()</span>:起始的颜色，参数为颜色的值，也可以是rgb()的形式，rgb可以附带颜色透明</p>
+        <p class="mt20"><span class="info">to()</span>:结束的颜色，参数为颜色的值，也可以是rgb()的形式，rgb可以附带颜色透明</p>
+        <p class="mt20"><span class="info">color-stop</span>(0.9, rgba(0,0,0,1)): 对于渐变过程中 颜色开始变化的控制，第一个参数为 起始百分比，第二参数为颜色，可以写多个color-stop</p>
+    </div>
+
+
+</body>
+</html>

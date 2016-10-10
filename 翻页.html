@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+</head>
+<body>
+<table class="table table-bordered data-table">
+    <thead>
+    <tr class="info f13">
+        <td width="337">URL</td>
+        <td width="61">类型</td>
+        <td>首屏请求数</td>
+        <td>首屏大小</td>
+        <td>首屏加载时间</td>
+        <td>yslow评分</td>
+        <td>页面CPU使用率</td>
+        <td>DOM总量</td>
+        <td>页面单个请求加载时间</td>
+        <td width="60">总评分</td>
+        <td width="243">
+            备注
+        </td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td>小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td>A</td>
+        <td>
+            <div class="bar">
+                <div class="barBg" style="width: 30%">30%</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>WAP端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td class="t-ok">90%</td>
+        <td>小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-ok">B</td>
+        <td>首屏<250k</td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td class="t-warn">小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-warn">C</td>
+        <td><span class="f-red"> 数据加载失败，请重新</span><a href="">加载</a></td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td class="t-red">小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-no">不合格</td>
+        <td>首屏<250k</td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td class="t-red">小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-no">不合格</td>
+        <td>首屏<250k</td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td class="t-red">小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-no">不合格</td>
+        <td>首屏<250k</td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td class="t-red">小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-no">不合格</td>
+        <td>首屏<250k</td>
+    </tr>
+    <tr>
+        <td><p>http://product.suning.com/detail_0070118185_128313431.html</p></td>
+        <td>PC端</td>
+        <td>23s</td>
+        <td>300k</td>
+        <td>小于1.5s</td>
+        <td>90%</td>
+        <td class="t-red">小于35%</td>
+        <td>3000</td>
+        <td>2s</td>
+        <td class="t-no">不合格</td>
+        <td>首屏<250k</td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="pageArea">
+    <ul class="pagination">
+        <li>
+            <a href="javascript:void 0" class="page-pre">
+                <span >&laquo;</span>
+            </a>
+        </li>
+        <li>
+            <a href="javascript:void 0" class="page-next">
+                <span>&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    var pageDetect = {};
+    //分页，直接塞数据
+    pageDetect.pageInit = function (tar) {
+        //分页 初始化隐藏
+        var maxnum = 3; //最大显示数
+        var len =  $('.data-table tbody tr').length;
+        var $lis =  $('.data-table tbody tr');
+        var pagecur = 1;
+        var pagenum = Math.ceil(len/maxnum);
+        $lis.hide().slice(0,maxnum).show();
+
+        var pageHtml = "";
+        //creat pageNum
+        for (var i = 0; i < pagenum; i++) {
+            var li_class = i == 0 ?"numType active":"numType";
+            pageHtml+= '<li class="'+li_class+'"><a href="javascript:void 0">'+(i+1)+'</a></li>';
+        }
+        $('.pagination li:first').after(pageHtml);
+
+        //翻页效果
+        $('.pagination a').on('click', function () {
+
+            if( $(".pagination .numType").length == 1){
+                return false;
+            }
+
+            if($(this).hasClass('page-pre')){
+                if(pagecur != 1){
+                    pagecur --;
+                }else{
+                    pagecur = pagenum;
+                }
+                var start = (pagecur-1)*maxnum;
+                $(".pagination .numType").eq(pagecur-1).addClass("active").siblings().removeClass("active");
+                $lis.hide().slice(start,start+maxnum).show();
+            }else if($(this).hasClass('page-next')){
+                if(pagecur != pagenum){
+                    pagecur ++;
+                }else{
+                    pagecur = 1;
+                }
+                var start = (pagecur-1)*maxnum;
+                $lis.hide().slice(start,start+maxnum).show();
+                $(".pagination .numType").eq(pagecur-1).addClass("active").siblings().removeClass("active");
+            }else{
+                var curNum = $(this).text();
+                pagecur = curNum;
+                $(this).parent().addClass("active").siblings().removeClass("active");
+                var start = (curNum-1)*maxnum;
+                $lis.hide().slice(start,start+maxnum).show();
+            }
+        });
+    }
+    pageDetect.pageInit();
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        .main{
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .mt20{
+            margin-top: 20px;
+        }
+
+        .info{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div class="main">
+    <h1>蒙层</h1>
+</div>
+    <div class="main">
+        <p>图片蒙层</p>
+        <p>-webkit-mask写法依赖于background</p>
+        <div style="background: url(lion.png) no-repeat;width: 120px;height: 117px" ></div>
+        <div style="background: url(girl.jpg) no-repeat;width: 300px;height: 420px;" ></div>
+        <p>结合后</p>
+        <div style="background: url(girl.jpg) no-repeat;width: 200px;height: 200px;-webkit-mask: url(lion.png) no-repeat;-webkit-mask-position: center top" ></div>
+
+    </div>
+
+
+
+    <div class="main">
+        <p>渐变蒙层</p>
+        <p>from和to里的色值必须用rgba带透明，对色值无效</p>
+        <div style="background: url(girl.jpg) no-repeat;width: 300px;height: 420px;-webkit-mask:-webkit-gradient(linear, 0 50%  ,100% 50% , from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));" ></div>
+    </div>
+
+
+</body>
+</html>

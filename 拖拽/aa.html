@@ -25,7 +25,7 @@
             start:function(e){
                 var o;
                 e = rDrag.fixEvent(e);
-                e.preventDefault && e.preventDefault();
+                e.preventDefault;
                 rDrag.o = o = this;
                 o.x = e.clientX - rDrag.o.offsetLeft;
                 o.y = e.clientY - rDrag.o.offsetTop;
@@ -46,11 +46,11 @@
             },
             fixEvent: function(e){
                 if (!e) {
-                    e = window.event;
-                    e.target = e.srcElement;
-                    e.layerX = e.offsetX;
-                    e.layerY = e.offsetY;
-                }
+                e = window.event;
+                e.target = e.srcElement;
+                e.layerX = e.offsetX;
+                e.layerY = e.offsetY;
+            }
                 return e;
             }
         }

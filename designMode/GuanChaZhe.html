@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        p{
+            margin-bottom: 10px;
+        }
+
+        .main{
+            margin: 30px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+        .title{
+            font-size: 30px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="main">
+        <p>观察者模式</p>
+        <p>造一个事件盒子，监听事件的多个回调方法，使用者手动去触发事件,自动执行回调方法</p>
+        <p><a href="javascript:void 0" onclick="find(document.getElementById('find').value)">找电影</a><input id="find" type="text" /></p>
+        <p><a href="javascript:void 0" onclick="playBox.emit('play')">观看电影</a></p>
+        <p class="title">电影列表</p>
+        <div id="list">
+
+        </div>
+    </div>
+
+    <script>
+        //造一个全局事件盒子
+       Event = function () {
+           var listen,emit,_this,obj;
+           obj = {};
+           _this = this;
+           listen = function (eventName,fn) {
+               var stack, _ref;  //stack是指定事件的盒子,存放函数方法
+               stack = ( _ref = obj[eventName] ) != null ? _ref : obj[ eventName ] = [];
+               stack.push(fn);
+           };
+           emit = function () {
+               var fn,stack, _ref,key;
+               key = Array.prototype.shift.call(arguments);
+               stack = ( _ref = obj[key] ) != null ? _ref : obj[ key ] = [];
+               for (var i = 0; i < stack.length; i++) {
+                   fn = stack[i];
+//                   fn.apply(_this,arguments);
+                   if(fn() === false){
+                       return false;
+                   };
+               }
+           };
+
+           return {
+               listen:listen,
+               emit:emit
+           }
+       }
+
+        var playBox = Event();
+
+        function find(data){
+            var elem = document.createElement("p");
+            elem.innerText = data;
+            document.getElementById("list").appendChild(elem);
+
+            playBox.listen('play',function(){
+                alert(data);
+            });
+
+        }
+
+
+    </script>
+</body>
+</html>

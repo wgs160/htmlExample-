@@ -23,8 +23,6 @@
      function Dog()
      {
          this.name="dog";
-         this.info = function(){ //函数传进了参数
-         }
      }
 
      Dog.prototype.table = "dg";
@@ -41,22 +39,24 @@
          Dog.call(this);
      }
 
-     function red()
-     {
-         this.table = "jg";
-         Dog.call(this);
-     }
-
      Jinmao.prototype = new Dog();
-     red.prototype = new Dog();
-
 
      var jinmao = new Jinmao();
-     var r = new red();
 
-     r.conn = false;
      jinmao.show();
-     r.show();
+
+
+     var a = {};
+     console.log(a.__proto__);
+     console.log(a.prototype);
+     var b = function () {
+         this.name = "hh"
+     };
+     var bb  = new b();
+     console.log(b.__proto__);
+     console.log(b.prototype);
+     console.log(bb);
+
 
 </script>
 </body>
