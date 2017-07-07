@@ -1,0 +1,47 @@
+/* 头部 */
+
+/*大于768px时，对nav-header设置固定宽度，和左侧菜单栏相同，给brand设置宽度，可以居中显示字体*/
+@media only screen and (min-width: 768px){
+    .g-hd .navbar-header{
+        width: 220px;
+        text-align: center;
+    }
+
+    .navbar-brand{
+    width: 100%;
+}
+}
+
+/*小于767px时，使绝对定位的右侧隐藏的菜单开关按钮出现*/
+@media only screen and (max-width: 767px){
+    .sidebar-toggle {
+        position: absolute!important;
+        top: 5px;
+        right: 0;
+        z-index: 3001;
+    }
+}
+/* 身体 内容*/
+.g-bd{
+    background-color: #fff;
+    margin-top: 80px;
+}
+.g-bd-row{
+    margin-bottom: 60px;
+}
+
+.s-show-grid {
+    margin-bottom: 15px;
+}
+
+.s-show-grid [class^=col-]{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #eee;
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid #ddd;
+    border: 1px solid rgba(86,61,124,.2);
+}
+
+
+
